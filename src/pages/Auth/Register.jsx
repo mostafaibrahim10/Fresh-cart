@@ -80,7 +80,7 @@ export default function Register() {
     mutationFn: (values) => axios.post(SIGNUP_URL, values),
     onSuccess: () => {
       toast.success("Account created successfully.");
-      navigate("/Home");
+      navigate("/Login");
     },
     onError: (error) => {
       toast.error(
