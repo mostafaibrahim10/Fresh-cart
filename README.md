@@ -1,158 +1,156 @@
-🛒 FreshCart — React E-Commerce Web Application
+🛒 FreshCart
 
-FreshCart is a responsive single-page e-commerce application built with React.js and a RESTful backend API.
+A responsive e-commerce Single Page Application built with React.js and a RESTful backend API.
 
-The application covers the main shopping journey: product discovery, search and filtering, product details, authentication, cart management, wishlist management, checkout, and payment flows.
+FreshCart covers the main shopping journey: discovering products, searching and filtering, viewing product details, managing a cart and wishlist, authenticating users, and completing checkout with Cash on Delivery or Stripe.
 
-The project also focuses on practical frontend architecture: server-state vs client-state management, asynchronous data fetching, caching, query invalidation, protected routes, API abstraction, reusable components, form validation, and responsive UI.
+🔗 Repository
 
-✨ What Can Users Do?
+GitHub: https://github.com/mostafaibrahim10/Fresh-cart
 
-🛍️ Product Discovery
+✨ Features
 
-Browse the available product catalog.
+Product Discovery
 
-Search products by title, category, brand, and subcategory.
+Browse products from the backend API.
+
+Search by product title, category, brand, and subcategory.
 
 Filter products by category and subcategory.
 
-Open a dynamic product details page for each product.
+View dynamic product detail pages.
 
-View product information such as price, rating, stock, brand, category, and images.
+Display price, discount, rating, stock, brand, category, and product images.
 
-🏷️ Categories & Brands
+Categories & Brands
 
-Browse product categories through a responsive slider.
+Browse product categories and subcategories.
 
-Open category details.
-
-Browse products through subcategories.
+Explore products through category-based navigation.
 
 Browse available brands.
 
-🛒 Shopping Cart
+Shopping Cart
 
 Add products to the cart.
 
-Increase or decrease product quantities.
+Increase or decrease quantities.
 
 Remove individual products.
 
 Clear the cart.
 
-Display the current cart item count in the navigation bar.
+Display the current cart item count in the navbar.
 
 Keep cart data synchronized with the backend.
 
-❤️ Wishlist
+Wishlist
 
 Add products to the wishlist.
 
 Remove products from the wishlist.
 
-View wishlist items in a dedicated page.
+View wishlist items on a dedicated page.
 
-Open the wishlist from the navigation bar through a drawer.
+Open wishlist items from the navbar drawer.
 
-Refresh wishlist data after mutations using TanStack Query.
+Refresh server data after wishlist mutations with TanStack Query.
 
-🔐 Authentication
+Authentication
 
-Create a new account.
+Register a new account.
 
-Sign in and sign out.
+Login and logout.
 
-Persist authentication data using local storage.
+Persist authentication data on the client.
 
-Access protected application routes only when authenticated.
+Protect authenticated routes.
 
-Recover a forgotten password through a verification-code flow.
+Forgot password flow.
 
-Verify the reset code.
+Verification-code flow.
 
-Create a new password.
+Reset password flow.
 
-💳 Checkout & Payments
+Checkout & Payments
 
-Review cart information before checkout.
+Review cart items before checkout.
 
 Enter shipping information.
 
-Select a payment method.
+Place Cash on Delivery orders.
 
-Complete an order using Cash on Delivery.
+Create Stripe checkout sessions.
 
-Start an online Stripe checkout session.
-
-Return to the application after the Stripe flow.
+Redirect to the payment URL returned by the API.
 
 Display a payment-success state.
 
-📱 Responsive Experience
+Responsive UI
 
-Responsive layouts for mobile, tablet, and desktop.
+Responsive layouts for desktop, tablet, and mobile.
 
-Mobile navigation drawer with access to the main sections.
+Dedicated mobile navigation with a hamburger menu.
 
 Responsive product grids and sliders.
 
-Mobile-friendly cart, wishlist, authentication, and checkout interfaces.
+Mobile-friendly cart, wishlist, authentication, and checkout screens.
 
 🧰 Tech Stack
 
-Core
+Category
 
-React 19 — component-based UI development.
+Technologies
 
-JavaScript (ES6+) — application logic and data manipulation.
+Frontend
 
-Vite 8 — development server and build tooling.
+React 19, JavaScript (ES6+), Vite 8
 
-Routing & State Management
+Routing
 
-React Router 7 — client-side routing, dynamic routes, layouts, and protected routes.
+React Router 7
 
-Redux Toolkit — lightweight client-side application state.
+Client State
 
-React Redux — connecting React components to the Redux store.
+Redux Toolkit, React Redux
 
-TanStack Query 5 — server-state management, asynchronous fetching, caching, mutations, and query invalidation.
+Server State
 
-API & Data
+TanStack Query 5
 
-Axios — HTTP communication with the REST API.
+API
 
-Routemisr E-Commerce REST API — backend data source for products, categories, cart, wishlist, authentication, and checkout operations.
+Axios, REST API
 
-Styling & UI
+Styling
 
-Tailwind CSS 4 — responsive utility-first styling.
+Tailwind CSS 4
 
-Lucide React — interface icons.
+UI
 
-Swiper — product/category and hero sliders.
+Lucide React, Flowbite React
 
-Vaul — drawer-based wishlist UI.
+Forms
 
-Forms & Validation
+React Hook Form, Zod, @hookform/resolvers
 
-React Hook Form — form state and submission handling.
+Animation & Interaction
 
-Zod — schema-based validation.
+Motion, GSAP, Swiper
 
-@hookform/resolvers — connecting Zod with React Hook Form.
+Feedback
 
-UX & Interaction
+React Hot Toast, React Loader Spinner
 
-Motion — UI transitions and micro-interactions.
+Metadata
 
-React Hot Toast — success and error notifications.
+React Helmet Async
 
-React Loader Spinner — loading indicators.
+Drawer
 
-React Helmet Async — page-level metadata management.
+Vaul
 
-flowbite-react and gsap are present in the project's dependency list but are not part of the active implementation. They are intentionally not presented above as core technologies used by FreshCart.
+The project includes flowbite-react and gsap in its dependencies. They are listed in the stack because they are project dependencies; however, the main application flow relies primarily on Tailwind CSS, Lucide React, Motion, Swiper, and Vaul for UI and interaction.
 
 🏗️ Project Structure
 
@@ -161,71 +159,25 @@ src/
 │   └── api.js
 │
 ├── assets/
-│   ├── freshcart-logo.svg
-│   ├── grocery-banner*.jpg
-│   ├── slider-image-*.jpeg
-│   └── error.svg
 │
 ├── Components/
 │   ├── AnnouncementBar/
-│   │   ├── AnnouncementBar.jsx
-│   │   └── TextLoop.jsx
-│   │
 │   ├── Footer/
-│   │   └── Footer.jsx
-│   │
 │   ├── Layout/
-│   │   └── Layout.jsx
-│   │
 │   ├── Navbar/
-│   │   └── Navbar.jsx
-│   │
 │   ├── NotFound/
-│   │   └── NotFound.jsx
-│   │
 │   └── ProtectedRoute/
-│       └── ProtectedRoute.jsx
 │
 ├── pages/
 │   ├── Auth/
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── ForgotPassword.jsx
-│   │   ├── VerifyResetCode.jsx
-│   │   └── ResetPassword.jsx
-│   │
 │   ├── Brands/
-│   │   ├── Brands.jsx
-│   │   └── BrandDetails.jsx
-│   │
 │   ├── Cart/
-│   │   ├── Cart.jsx
-│   │   └── CartPage.jsx
-│   │
 │   ├── Categories/
-│   │   ├── Categories.jsx
-│   │   ├── CategoryDetails.jsx
-│   │   └── SubCategory.jsx
-│   │
 │   ├── Checkout/
-│   │   ├── Checkout.jsx
-│   │   └── PaymentSuccess.jsx
-│   │
 │   ├── Home/
-│   │   └── Home.jsx
-│   │
 │   ├── Products/
-│   │   ├── Products.jsx
-│   │   ├── ProductDetails.jsx
-│   │   └── CategoryTree.jsx
-│   │
 │   ├── Slider/
-│   │   └── Slider.jsx
-│   │
 │   └── Wishlist/
-│       ├── Wishlist.jsx
-│       ├── WishlistHeartButton.jsx
-│       └── WishlistSlide.jsx
 │
 ├── Redux/
 │   ├── AuthenticationSlice.js
@@ -238,67 +190,65 @@ src/
 ├── jsconfig.json
 └── main.jsx
 
-🧠 Architecture Overview
+The main separation is:
 
-The application is organized around three main concerns:
+Components/ — reusable UI and shared application components.
 
-React Components / Pages
-        │
-        ├── React Router
-        │
-        ├── Redux Toolkit
-        │      └── Client-side state
-        │
-        └── TanStack Query
-               └── Server-side state
-                       │
-                       ▼
-                Axios API Client
-                       │
-                       ▼
-             Routemisr REST API
+pages/ — page-level features and user flows.
 
-Client State
+api/ — shared API client and API-related functions.
 
-Redux Toolkit is intentionally kept small and is used for application-level state such as:
+Redux/ — client-side application state.
 
-Authenticated user information.
+🧠 Architecture & State Management
 
-Authentication token.
+FreshCart separates backend-owned data from lightweight client-side application state.
 
-Cart item count displayed in the navbar.
+TanStack Query — Server State
 
-Server State
+Used for backend data and asynchronous operations such as:
 
-TanStack Query handles backend-owned data such as:
+Products
 
-Products.
+Categories
 
-Categories.
+Cart
 
-Cart data.
+Wishlist
 
-Wishlist data.
+Product details
 
-Product details.
+Mutations and checkout requests
 
-Checkout-related requests.
+Query caching
 
-This separation keeps API data out of Redux when React Query can manage it directly.
+Query invalidation
 
-🌐 API Architecture
+Loading and error states
 
-One of the architectural improvements in the project is the introduction of a shared Axios API client in:
+Redux Toolkit — Client State
+
+Used for small application-level state such as:
+
+Authenticated user information
+
+Authentication token
+
+Cart item count
+
+This avoids duplicating server-managed data inside Redux when TanStack Query can manage it directly.
+
+🌐 Global API Client
+
+The project uses a shared Axios instance in:
 
 src/api/api.js
 
-The shared instance centralizes the API base URL:
+The instance centralizes the backend base URL and uses an Axios request interceptor to attach the authentication token automatically.
 
 const api = axios.create({
   baseURL: BASE_URL,
 });
-
-It also uses an Axios request interceptor to attach the user's token automatically:
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
@@ -310,104 +260,47 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-This reduces repeated configuration and avoids manually attaching the token to every authenticated request.
+Why this approach?
 
-API Abstraction & Reusability
+Instead of creating a new Axios configuration for every feature, the application imports the same configured API client wherever it is needed.
 
-The shared API client acts as a reusable abstraction layer between the React application and the backend. Feature modules can consume the same configured client instead of creating their own Axios instance.
+This demonstrates practical software-design concepts:
 
-This demonstrates practical concepts of:
+Abstraction — API setup is hidden behind one reusable client.
 
-Abstraction — API configuration is encapsulated in one place.
+Encapsulation — token injection is handled inside the interceptor.
 
-Encapsulation — authentication-header behavior is handled by the client interceptor.
+Reusability — multiple features consume the same API instance.
 
-Reusability — multiple features consume the same configured API client.
+Separation of concerns — UI components do not need to repeat API configuration.
 
-Separation of concerns — UI components do not need to know the API base configuration.
+Technical note: this is more accurately described as API abstraction and reuse rather than classical OOP inheritance. The project does not use class / extends; it uses a shared Axios instance that is imported and reused across features.
 
-Technical note: this implementation is better described as API abstraction, encapsulation, and reuse rather than classical class inheritance. The code does not use class / extends; it uses a shared Axios instance. This distinction keeps the documentation accurate.
-
-🔄 TanStack Query
-
-TanStack Query is used as the server-state layer.
-
-Examples of the responsibilities handled by React Query include:
-
-Asynchronous API fetching.
-
-Loading and error states.
-
-Query caching.
-
-Mutations.
-
-Query invalidation.
-
-Keeping UI data synchronized with backend responses.
-
-Preventing unnecessary refetching through query configuration.
-
-Example pattern:
-
-useQuery({
-  queryKey: ["cart"],
-  queryFn: getCart,
-  enabled: Boolean(token),
-  staleTime: 5 * 60 * 1000,
-  refetchOnWindowFocus: false,
-});
-
-The project also uses mutations for operations such as adding or removing cart and wishlist items.
-
-🗃️ Redux Toolkit
-
-Redux Toolkit is used for small pieces of client-side state rather than duplicating the backend cache.
-
-Authentication Slice
-
-user
-token
-
-The authentication slice also provides storage helpers for persisting and clearing authentication data in local storage.
-
-Cart Slice
-
-count
-
-The cart count is synchronized from the backend cart response and displayed in the navbar.
-
-This keeps Redux lightweight while TanStack Query remains responsible for the actual server-owned cart and wishlist data.
-
-🔐 Authentication & Protected Routes
-
-Authentication includes:
+🔐 Authentication Flow
 
 Register
    ↓
 Login
    ↓
-Store User + Token
+Store authentication data
    ↓
-Protected Routes
+Access protected routes
 
 Password recovery:
 
 Forgot Password
    ↓
-Verification Code
+Send verification code
    ↓
-Verify Code
+Verify code
    ↓
-Reset Password
+Reset password
+   ↓
+Login
 
-Protected routes are handled with React Router and a dedicated ProtectedRoute component.
-
-The guard redirects unauthenticated users to the login page.
+Protected routes are handled through a dedicated ProtectedRoute component.
 
 🛒 Shopping Flow
-
-The main shopping journey is:
 
 Home
   ↓
@@ -417,7 +310,7 @@ Search / Filtering
   ↓
 Product Details
   ↓
-Wishlist / Cart
+Cart / Wishlist
   ↓
 Checkout
   ↓
@@ -425,11 +318,7 @@ Cash or Stripe
   ↓
 Payment Success
 
-This gives the application a complete user-facing shopping flow rather than a collection of disconnected UI pages.
-
-💳 Checkout & Payment
-
-The checkout page communicates with the backend to create orders.
+💳 Checkout Flow
 
 Cash on Delivery
 
@@ -457,197 +346,61 @@ Redirect to Stripe
  ↓
 Return to Application
 
-The frontend is responsible for initiating the Stripe checkout session and redirecting the user to the payment URL returned by the API.
-
-📱 Responsive Design
-
-Responsive behavior was implemented using Tailwind CSS breakpoints.
-
-The mobile experience uses a dedicated navigation pattern instead of trying to compress the desktop navbar into a small viewport:
-
-☰  FreshCart  ♡  🛒
-
-The mobile menu provides access to:
-
-Home
-
-Categories
-
-Brands
-
-Products
-
-Cart
-
-Wishlist
-
-Login / Logout
-
-This keeps high-frequency shopping actions visible while moving lower-priority navigation items into the menu.
-
 ⚡ Performance & Data Efficiency
 
-The project applies several practical techniques for reducing unnecessary work:
+The project uses targeted techniques to avoid unnecessary server requests and repeated calculations:
 
 TanStack Query caching.
 
-Configured staleTime values for frequently reused server data.
+Configured staleTime values for reused server data.
 
-Disabled unnecessary window-focus refetching where appropriate.
+Disabled unnecessary refetchOnWindowFocus behavior where appropriate.
 
-useMemo for derived product filtering and calculated product data.
+useMemo for derived product data and filtering.
 
-A single QueryClient instance created outside the App component.
+Shared query keys for synchronized cart and wishlist data.
 
-A single router instance created outside the App component.
+These are practical caching and rendering optimizations rather than a claim of complete production-level performance engineering.
 
-These are targeted optimizations and caching strategies; the project does not claim to be a fully performance-optimized production application.
+📱 Responsive Navigation
 
-🧩 Reusable Components
+On desktop, the application uses the full navigation bar.
 
-Reusable UI pieces include:
+On smaller screens, the layout switches to a dedicated mobile navigation pattern:
 
-Navbar
+☰   FreshCart   ♡   🛒
 
-Footer
+The hamburger menu contains the main navigation sections while high-frequency shopping actions such as Wishlist and Cart remain directly accessible from the header.
 
-Layout
+🎯 Key Technical Highlights
 
-ProtectedRoute
+Built a React 19 Single Page Application with Vite.
 
-AnnouncementBar
+Implemented dynamic routing with React Router.
 
-TextLoop
+Integrated REST APIs using Axios.
 
-Cart
-
-WishlistHeartButton
-
-WishlistSlide
-
-Slider
-
-CategoryTree
-
-The goal is to keep repeated UI behavior encapsulated instead of rebuilding the same interaction in every page.
-
-📌 Key Technical Highlights
-
-Built a React SPA using React 19 + Vite.
-
-Implemented client-side routing with React Router.
-
-Implemented protected routes for authenticated shopping features.
-
-Integrated a REST API using Axios.
-
-Created a reusable shared API client with automatic authentication-token injection.
+Created a reusable global Axios API client with request interceptors.
 
 Managed server state with TanStack Query.
 
-Managed client-side application state with Redux Toolkit.
+Managed client-side state with Redux Toolkit.
 
-Implemented asynchronous fetching, mutations, caching, and query invalidation.
+Implemented asynchronous data fetching, mutations, caching, and query invalidation.
 
 Built authentication and password-recovery flows.
 
-Implemented cart and wishlist management.
+Implemented protected routes.
 
-Integrated Cash on Delivery and Stripe checkout flows.
+Built cart and wishlist management.
 
-Added responsive layouts for mobile, tablet, and desktop.
+Implemented Cash on Delivery and Stripe checkout flows.
 
-Added form validation using React Hook Form + Zod.
+Added responsive layouts and mobile navigation.
 
-Added dynamic product routes and product-level metadata.
+Implemented form handling and schema validation.
 
-Built reusable UI components and interactive navigation.
-
-📋 Route Overview
-
-Public Routes
-
-Route
-
-Purpose
-
-/
-
-Home page
-
-/Products
-
-Product catalog
-
-/ProductDetails/:id
-
-Product details
-
-/Brands
-
-Brand listing
-
-/BrandDetails/:id
-
-Brand details route
-
-/Categories
-
-Category listing
-
-/CategoryDetails/:id
-
-Category details
-
-/SubCategory/:id
-
-Subcategory route
-
-/Login
-
-User login
-
-/Register
-
-User registration
-
-/ForgotPassword
-
-Password recovery
-
-/VerifyResetCode
-
-Verification code
-
-/ResetPassword
-
-Password reset
-
-Protected Routes
-
-Route
-
-Purpose
-
-/Cart
-
-User cart
-
-/Wishlist
-
-User wishlist
-
-/Checkout
-
-Checkout
-
-/PaymentSuccess
-
-Successful payment state
-
-/Addresses
-
-Address page
+Built reusable React components for shared UI patterns.
 
 
 
@@ -655,7 +408,3 @@ Address page
 
 Mostafa Ibrahim
 Frontend Developer focused on React.js, JavaScript, REST APIs, state management, and modern frontend development.
-
-⭐ Project Focus
-
-FreshCart was built to practice and demonstrate how a modern React frontend can connect UI components, client state, server state, authentication, API communication, and e-commerce business flows into one application.
